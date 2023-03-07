@@ -1,6 +1,6 @@
 import {Component, Input, OnInit} from '@angular/core';
-import {AppointmentService} from '../../appNew/calendar-service/appointment.service';
-import {AppointmentType} from '../../appNew/entities/calendar/appointment-type';
+import {AppointmentService} from '../services/calendar-service/appointment.service';
+import {AppointmentType} from '../entities/calendar/appointment-type';
 import {Output, EventEmitter} from '@angular/core';
 
 @Component({

@@ -1,20 +1,20 @@
 import {Component, Inject} from '@angular/core';
 import {MAT_DIALOG_DATA, MatDialog, MatDialogRef} from '@angular/material/dialog';
 import {CalendarEvent} from 'angular-calendar';
+import {AddEventDialogComponent} from '../add-event-dialog/add-event-dialog.component';
 import {MatSnackBar} from '@angular/material/snack-bar';
-import {AppointmentService} from '../../../services/calendar-service/appointment.service';
-import {MentorAddEventDialogComponent} from '../add-event-dialog/add-event-dialog.component';
+import {AppointmentService} from '../../calendar-service/appointment.service';
 
 @Component({
   selector: 'app-event-dialog',
   templateUrl: './event-dialog.component.html',
   styleUrls: ['./event-dialog.component.scss']
 })
-export class MentorEventDialogComponent {
+export class EventDialogComponent {
   dialogPatch: any;
   sending = false;
 
-  constructor(private dialogRef: MatDialogRef<MentorEventDialogComponent>,
+  constructor(private dialogRef: MatDialogRef<EventDialogComponent>,
               private dialog: MatDialog,
               private appointmentService: AppointmentService,
               private snackBar: MatSnackBar,
@@ -22,9 +22,11 @@ export class MentorEventDialogComponent {
   }
 
   confirm(id: number): void {
+    this.sending = true;
     if (confirm('Действительно хотите удалить?')) {
       this.delete(id);
     }
+    this.sending = false;
   }
 
   delete(id: number): void {
@@ -44,6 +46,6 @@ export class MentorEventDialogComponent {
   }
 
   usePatchDialog() {
-    this.dialogPatch = this.dialog.open(MentorAddEventDialogComponent, {data: {event: this.event, mentorId: null, dialog: this.dialogRef}});
+    this.dialogPatch = this.dialog.open(AddEventDialogComponent, {data: {event: this.event, mentorId: null, dialog: this.dialogRef}});
   }
 }

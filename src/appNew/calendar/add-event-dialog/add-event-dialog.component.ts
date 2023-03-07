@@ -2,9 +2,9 @@ import {Component, Inject, OnInit} from '@angular/core';
 import {MAT_DIALOG_DATA, MatDialogRef} from '@angular/material/dialog';
 import {CalendarEvent} from 'angular-calendar';
 import {MatSnackBar} from '@angular/material/snack-bar';
-import {AppointmentService} from '../../../services/calendar-service/appointment.service';
-import {AppointmentRequest} from '../../../entities/calendar/appointment-request';
-import {AppointmentUpdate} from '../../../entities/calendar/appointment-update';
+import {AppointmentService} from '../../calendar-service/appointment.service';
+import {AppointmentRequest} from '../../entities/calendar/appointment-request';
+import {AppointmentUpdate} from '../../entities/calendar/appointment-update';
 
 class DialogData {
   event: CalendarEvent;

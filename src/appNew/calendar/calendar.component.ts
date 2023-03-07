@@ -4,13 +4,13 @@ import {DatePipe, formatDate} from '@angular/common';
 import {MatDialog} from '@angular/material/dialog';
 import {EventDialogComponent} from './event-dialog/event-dialog.component';
 import {AddEventDialogComponent} from './add-event-dialog/add-event-dialog.component';
-import {Mentor} from '../../entities/mentor';
-import {AppointmentService} from '../../services/calendar-service/appointment.service';
-import {SlotService} from '../../services/calendar-service/slot.service';
-import {MentorService} from '../../services/mentor.service';
-import {AppointmentMeta} from '../../entities/calendar/appointment-meta';
+import {Mentor} from '../../app/entities/mentor';
+import {AppointmentService} from '../calendar-service/appointment.service';
+import {SlotService} from '../calendar-service/slot.service';
+import {MentorService} from '../../app/services/mentor.service';
+import {AppointmentMeta} from '../entities/calendar/appointment-meta';
 import {addMinutes, endOfISOWeek, isSameISOWeek, startOfISOWeek} from 'date-fns';
-import {AppointmentTime} from '../../entities/calendar/appointment-time';
+import {AppointmentTime} from '../entities/calendar/appointment-time';
 import {MatSidenav} from '@angular/material/sidenav';
 
 

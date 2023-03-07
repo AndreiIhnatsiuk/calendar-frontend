@@ -1,10 +1,10 @@
 import {Injectable} from '@angular/core';
 import {HttpClient, HttpParams} from '@angular/common/http';
 import {Observable} from 'rxjs';
-import {Slot} from '../../entities/calendar/slot';
-import {SlotRequest} from '../../entities/calendar/slot-request';
-import {SlotScheduleRequest} from '../../entities/calendar/slot-schedule-request';
-import {SlotScheduleUpdate} from '../../entities/calendar/slot-schedule-update';
+import {Slot} from '../entities/calendar/slot';
+import {SlotRequest} from '../entities/calendar/slot-request';
+import {SlotScheduleRequest} from '../entities/calendar/slot-schedule-request';
+import {SlotScheduleUpdate} from '../entities/calendar/slot-schedule-update';
 import {DatePipe} from '@angular/common';
 
 @Injectable({providedIn: 'root'})

@@ -12,17 +12,17 @@ import {finalize, takeUntil} from 'rxjs/operators';
 import {addDays, addMinutes, endOfISOWeek, endOfWeek, isSameISOWeek, setDay, startOfISOWeek} from 'date-fns';
 import {DatePipe, formatDate} from '@angular/common';
 import {MatDialog} from '@angular/material/dialog';
-import {AppointmentService} from '../../services/calendar-service/appointment.service';
-import {SlotService} from '../../services/calendar-service/slot.service';
-import {AppointmentMeta} from '../../entities/calendar/appointment-meta';
+import {AppointmentService} from '../calendar-service/appointment.service';
+import {SlotService} from '../calendar-service/slot.service';
+import {AppointmentMeta} from '../entities/calendar/appointment-meta';
 import {MentorEventDialogComponent} from './event-dialog/event-dialog.component';
 import {MentorAddEventDialogComponent} from './add-event-dialog/add-event-dialog.component';
 import {AddSlotsDialogComponent} from './add-slots-dialog/add-slots-dialog.component';
 import {MatSnackBar} from '@angular/material/snack-bar';
-import {AuthService} from '../../auth/auth.service';
+import {AuthService} from '../../app/auth/auth.service';
 import {FormControl, FormGroup} from '@angular/forms';
-import {SlotScheduleRequest} from '../../entities/calendar/slot-schedule-request';
-import {SlotScheduleTime} from '../../entities/calendar/slot-schedule-time';
+import {SlotScheduleRequest} from '../entities/calendar/slot-schedule-request';
+import {SlotScheduleTime} from '../entities/calendar/slot-schedule-time';
 import {DateAdapter, NativeDateAdapter} from '@angular/material/core';
 
 function floorToNearest(amount: number, precision: number) {
