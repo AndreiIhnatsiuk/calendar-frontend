@@ -1,8 +1,8 @@
 import {Component, Inject, OnInit} from '@angular/core';
-import {SlotService} from '../../../services/calendar-service/slot.service';
+import {SlotService} from '../../calendar-service/slot.service';
 import {MatSnackBar} from '@angular/material/snack-bar';
 import {MAT_DIALOG_DATA, MatDialogRef} from '@angular/material/dialog';
-import {SlotRequest} from '../../../entities/calendar/slot-request';
+import {SlotRequest} from '../../entities/calendar/slot-request';
 import {CalendarEvent} from 'angular-calendar';
 import {DatePipe} from '@angular/common';
 

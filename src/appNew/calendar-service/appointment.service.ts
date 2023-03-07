@@ -1,11 +1,11 @@
 import {Injectable} from '@angular/core';
 import {HttpClient, HttpParams} from '@angular/common/http';
 import {Observable} from 'rxjs';
-import {Appointment} from '../../entities/calendar/appointment';
-import {AppointmentType} from '../../entities/calendar/appointment-type';
-import {AppointmentRequest} from '../../entities/calendar/appointment-request';
-import {AppointmentUpdate} from '../../entities/calendar/appointment-update';
-import {AppointmentTime} from '../../entities/calendar/appointment-time';
+import {Appointment} from '../entities/calendar/appointment';
+import {AppointmentType} from '../entities/calendar/appointment-type';
+import {AppointmentRequest} from '../entities/calendar/appointment-request';
+import {AppointmentUpdate} from '../entities/calendar/appointment-update';
+import {AppointmentTime} from '../entities/calendar/appointment-time';
 import {DatePipe} from '@angular/common';
 
 @Injectable({providedIn: 'root'})
